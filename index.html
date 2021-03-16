@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loading</title>
+    <script src="js/jquery-1.11.0.min.js"></script>
+</head>
+<style>
+    body {
+        background: #000;
+        background: url(img/banner.jpg)no-repeat fixed center;
+        overflow: hidden;
+    }
+
+    .box-b {
+        margin: 0 auto;
+        width: 105%;
+        height: 100vh;
+        background: url(img/img2.jpg);
+        position: relative;
+        transition: 2s;
+        top: -8px;
+        left: -10px;
+    }
+
+    .jz {
+        height: 3.5vh;
+        width: 90%;
+        background: #2170F5;
+        position: fixed;
+        bottom: 5%;
+        left: 5%;
+        overflow: hidden;
+        border-radius: 100px;
+        opacity: 1;
+        transition: 1s;
+    }
+
+    .x {
+        height: 2.5vh;
+        width: 1%;
+        background: #fff;
+        position: relative;
+        top: 15%;
+        left: 0.5%;
+        transition: 5s;
+        border-radius: 100px;
+    }
+
+    .tb{position: absolute; left: 40%; top: 25%;}
+
+    @-webkit-keyframes rotation{from {-webkit-transform: rotate(0deg);}to {-webkit-transform: rotate(360deg);}}    
+    img{-webkit-transform: rotate(360deg);animation: rotation 3s linear infinite;-moz-animation: rotation 3s linear infinite;-webkit-animation: rotation 3s linear infinite;-o-animation: rotation 3s linear infinite;}
+</style>
+
+<body>
+    <div class="box-b">
+        <div class="tb">
+            <img src="img/tb.png" alt="">
+        </div>
+        <div class="jz">
+            <div class="x"></div>
+        </div>
+
+    </div>
+</body>
+<script>
+    window.onload = function () {
+        //第一屏侧边导航半出
+        $(".x").css("width", "99%");
+    }
+
+    setTimeout(function () {
+        $(".box-b").css("left", "-110%")
+        $(".jz").css("opacity", "0")
+    }, 5000)
+
+    setTimeout(function () {
+        window.location.href = "blog.html"
+    }, 6600)
+</script>
+
+</html>
