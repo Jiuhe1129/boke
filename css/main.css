@@ -1,0 +1,126 @@
+*{margin: 0; padding: 0;}
+body{font-family: "微软雅黑";}
+.box{width: 100%; height: 100vh; background: #000; overflow: hidden;}
+a,li{text-decoration: none; list-style: none;}
+.wp{width: 100%; height: 100vh;}
+.wp-a{transition: 1s; position: relative; top: 0px; right: 0; background: #000; background: url(../img/banner.jpg) no-repeat fixed center;}
+.wp-b{transition: 1s; position: relative; top: 0px; right: 0; background: #683f3f; background: url(../img/banner.jpg) no-repeat fixed center;}
+.wp-c{transition: 1s; position: relative; top: 0px; right: 0; background: #683f3f; background: url(../img/8463547.jpg) no-repeat fixed center;}
+
+.wp-a .nav{z-index: 2; color: #000; font-weight: 600; left: -200px; width: 150px; height: 99.99vh;position: absolute; transition: 1.6s; background: url(../img/cdh.png); overflow: hidden;}
+.wp-a .nav a{color: #000;}
+.wp-a .nav-nr {margin: 0 auto; position: relative; left: -100px; transition: 1.6s;}
+.wp-a .nav-nr ul li {font-size: 18px; width: 150px; text-align: center; line-height: 150px; transition: 1s;}
+.wp-a .nav-nr #z{position: relative; right: -150px; transition: 1.6s;}
+.wp-a .nav-nr #x{position: relative; right: -150px; transition: 2.1s;}
+.wp-a .nav-nr #v{position: relative; right: -150px; transition: 2.6s;}
+.wp-a .nav-nr li:hover{background: #000;color: #ffff; transition: 1.6s;}
+.wp-a .nav-nr .jt {position: relative; left: 135px;  top: -85px; transition: 1s;}
+.wp-a .nav-nr .tx{position: relative; top: 35px; left: 150px; transition: 1.6s;}
+
+.wp-a-nr{width: 100%; height: 100vh; opacity: 1; transition: 1.6s;}
+.wp-a .wp-a-nr .quan{position: relative; top: 70px; right: 100px;opacity: 0; transition: 1.6s;}
+.wp-a .wp-a-nr .quan .ren{position: absolute; top: 0px; left: 0px; width: 1062px;}
+.wp-a .wp-a-nr .me{position: absolute; top: 450px; right: 500px; color: #3d7df0; opacity: 0; transition: 1.6s;}
+.wp-a .wp-a-nr .me{display: flex; flex-direction:column}
+.wp-a .wp-a-nr .hire{position: absolute; bottom: 100px; right: 800px;}
+.wp-a .wp-a-nr .hire .lxw{position: relative; bottom: 30px; right: 50px;}
+.wp-a .wp-a-nr .hire a{color: #fff; font-size: 16px; font-weight: 500; letter-spacing:5px}
+.wp-a .wp-a-nr .fxk{position: absolute; top: 30px; right: 100px;}
+.wp-a .wp-a-nr .fxk a{position: relative; bottom: 25px; right: 50px; color: #fff; font-size: 30px; font-weight: 500;}
+.wp-a .wp-a-nr .zwjs{position: absolute; bottom: 90px; right: 120px; width: 390px;}
+.wp-a .wp-a-nr .zwjs p{color: #fff; letter-spacing:3px; line-height: 30px;}
+
+.q{background-color: #86fce7;animation: bgColor 5s infinite linear;width: 1061px;height: 1061px;border-radius: 555px;}
+  @keyframes bgColor {
+    12.5% {background-color: #abb6e5;}
+    25% {background-color: #a7bee5;}
+    37.5% {background-color: #9fcde5;}
+    50% {background-color: #99d7e6;}
+    62.5% {background-color: #92e6e7;}
+    75% {background-color: #8eede7;}
+    87.5% {background-color: #8bf2e7;}
+    100% {background-color: #86fce7;}}
+
+.hire{width: 151rpx;height: 153rpx;background: url(https://4bd2d4613.png) no-repeat 0 0;background-size: 100% 100%;animation: firstdiv 2s linear 2s infinite alternate;}
+ @keyframes firstdiv{
+    0%{transform: scale(1);}
+    50%{transform: scale(0.8);}
+    100%{transform: scale(1);}}
+
+.fxk{width: 151rpx;height: 153rpx;background: url(https://4bd2d4613.png) no-repeat 0 0;background-size: 100% 100%;animation: firstdiv 2s linear 2s infinite alternate;}
+@keyframes firstdiv{
+    0%{transform: scale(1);}
+    50%{transform: scale(0.9);}
+    100%{transform: scale(1);}}
+
+.page{z-index: 2; width: 100%; height: 99.99vh; position: absolute; right: -100%; transition: 1.6s; background: url(../img/banner-a.jpg);}
+.page .jt-2{position: relative; left: 100px; top: 515px; transition: 1.6s; -moz-transform: matrix(1, 0, 0, 1, 0, 0); -webkit-transform: matrix(1, 0, 0, 1, 0, 0); -o-transform:matrix(1,0,0,1,0,0);}
+.page-nr{width: 80%; height: 100vh; margin: 0 auto;  display: flex; opacity: 1;}
+.page-nr .cl{position: absolute; left: 1500px; -moz-transform: matrix(-1, 0, 0, 1, 0, 0); -webkit-transform: matrix(-1, 0, 0, 1, 0, 0); -o-transform:matrix(-1,0,0,1,0,0); transition: 1.6s;}
+.page .bt{width: 100%; font-size: 22px; color: #fff; position: relative; top: 50px; left: 50%; transition: 1.6s;}
+.gyw{position: absolute; top: 200px; height: 30vh;  width: 80%; line-height: 80px; color: #fff; letter-spacing: 5px;}
+.jn{display: flex; width: 100%; height: 15vh; justify-content: space-between; position: relative; top:75%;}
+@-webkit-keyframes rotation{from {-webkit-transform: rotate(0deg);}to {-webkit-transform: rotate(360deg);}}    
+.ps-a{-webkit-transform: rotate(360deg);animation: rotation 3s linear infinite;-moz-animation: rotation 3s linear infinite;-webkit-animation: rotation 3s linear infinite;-o-animation: rotation 3s linear infinite;}
+.ps-a{border-radius: 250px;}
+.ps a{position: relative; color: #fff; top: -45%; right: 50%; font-size: 20px;}
+
+
+.wp-b-nr{width: 90%; height: 100vh; margin: auto; }
+
+.wp-b-nr .zp-a{margin: auto; display: flex; position: relative; top: 100px;}
+.wp-b-nr .zp-a img{transition: 1.6s; width: 95%;}
+
+.wp-b-nr .zp-b{margin: auto; height: 580px; position: absolute; top: 320px; width: 90%; display: flex;  overflow: hidden; justify-content: ;}
+.wp-b-nr .zp-b img{transition: 1.6s;width: 90%;}
+
+.wp-b-nr .zp-a .zp-1{text-align: center; margin: 0 auto;}
+.wp-b-nr .zp-a .zp-2{text-align: center; margin: 0 auto;}
+.wp-b-nr .zp-a .zp-3{text-align: center; margin: 0 auto;}
+.wp-b-nr .zp-a .zp-4{text-align: center; margin: 0 auto;}
+.wp-b-nr .zp-b .zp-5{text-align: center; margin: 0 auto;}
+.wp-b-nr .zp-b .zp-6{text-align: center; margin: 0 auto;}
+.wp-b-nr .zp-b .zp-7{text-align: center; margin: 0 auto;}
+.wp-b-nr .zp-b .zp-8{text-align: center; margin: 0 auto;}
+
+.wp-b-nr .zp-a .zp-1 img:hover{width: 100%;}
+.wp-b-nr .zp-a .zp-2 img:hover{width: 100%}
+.wp-b-nr .zp-a .zp-3 img:hover{width: 100%;}
+.wp-b-nr .zp-a .zp-4 img:hover{width: 100%}
+
+
+.zp-1{position: relative; transition: 2s; left: -1000px;}
+.zp-2{position: relative; transition: 2s; left: -1000px;}
+.zp-3{position: relative; transition: 2s; right: -1000px;}
+.zp-4{position: relative; transition: 2s; right: -1000px;}
+.zp-5{position: relative; transition: 2s; top: 600px;}
+.zp-6{position: relative; transition: 2s; top: 600px;}
+.zp-7{position: relative; transition: 2s; top: 600px;}
+.zp-8{position: relative; transition: 2s; top: 600px;}
+
+
+.wp-b .wp-b-nr button{background-color: white;border: none;color: black;padding: 15px 32px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;margin: 4px 2px;cursor: pointer;}
+@media screen and (max-width:970px ) {
+    .box{height: 215vh;}
+    .q{display: none;}
+    .wp-a .wp-a-nr .quan{top: 150px; left: 25%;}
+    .quan img{width: 50%;}
+    .wp-a .wp-a-nr .quan .ren{width: 50%;}
+    .wp-a .wp-a-nr .fxk{right: 0;}
+    .wp-a .wp-a-nr .hire{top: 30%; left: 70%;}
+    .wp-a .wp-a-nr .fxk img{width: 50%;}
+    .wp-a .wp-a-nr .fxk a{bottom: 16px; right: 40px;}
+    .wp-a .wp-a-nr .zwjs{width: 64%; right: 17%; bottom: 20%;}
+    .wp-a .wp-a-nr .me{left: 30%; top:50%;}
+    .me img{width: 60%;}
+    .wp-a .wp-a-nr .zwjs{font-size: 12px; text-align: center;}
+    .wp-b #btn{display: none;}
+
+    .wp-b{height: 2000vh;}
+    .zp-a{display: block;}
+    .wp-a .wp-a-nr .hire .lxw{
+        top: -15%;
+        right: 20%;
+    }
+}
