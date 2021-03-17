@@ -124,15 +124,7 @@
 
         $(".x").css("width", "99%");
     }
-
-    setTimeout(function () {
-        $(".box-b").css("opacity", "0")
-    }, 4000)
-
-    setTimeout(function () {
-        window.location.href = "blog.html"
-    }, 6000)
-    var arr = ['嗨~ 别来无恙!', '马上就好了😊', ]
+    var arr = ['嗨~ 别来无恙!', '马上就好了😊' ]
 var index = 0
 var i = 0
 var str2 = ''
@@ -144,7 +136,7 @@ function add(index) {
     console.log(str2)
     font.innerHTML = str2
     if (index <= this.str.length) {
-        setTime('add', 170)
+        setTime('add', 200)
     } else {
         clearTimeout(time1)
         setTime('reduce', 1000)
@@ -186,6 +178,14 @@ function change(i) {
     }
 }
 change(0)
+
+setTimeout(function () {
+        $(".box-b").css("opacity", "0")
+    }, 4500)
+
+    setTimeout(function () {
+        window.location.href = "blog.html"
+    }, 6000)
 </script>
 
 </html>
