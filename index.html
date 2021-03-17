@@ -17,21 +17,22 @@
 
     .box-b {
         margin: 0 auto;
-        width: 105%;
+        width: 100%;
         height: 100vh;
-        background: url(img/img2.jpg);
         position: relative;
         transition: 2s;
         top: -8px;
         left: -10px;
+        opacity: 1;
     }
 
     .jz {
+        position: fixed;
+        text-align: center;
         height: 3.5vh;
         width: 90%;
         background: #2170F5;
-        position: fixed;
-        bottom: 5%;
+        bottom: 10%;
         left: 5%;
         overflow: hidden;
         border-radius: 100px;
@@ -50,10 +51,58 @@
         border-radius: 100px;
     }
 
-    .tb{position: absolute; left: 40%; top: 25%;}
+    * {
+	margin:0;
+	padding:0;
+}
+.d1 {
+    position: absolute;
+	width:100%;
+	height:100px;
+    top: 65%;
+    text-align: center;
+}
+
+.font {
+	margin:0 auto;
+	font-size:55px;
+	height:70px;
+	width:max-content;
+	color:#fff;
+	z-index:2;
+	text-align:left;
+}
+.font::after {
+	content:'';
+	display:inline-block;
+	width:2px;
+	height:80px;
+	background:#fff;
+	position:absolute;
+	animation:dh .8s ease-in-out infinite;
+}
+@keyframes dh {
+	0% {
+	opacity:0;
+}
+50% {
+	opacity:1;
+}
+100% {
+	opacity:0;
+}
+}
+
+    .tb{width: 100%; position: fixed; text-align: center; top: 15%;}
 
     @-webkit-keyframes rotation{from {-webkit-transform: rotate(0deg);}to {-webkit-transform: rotate(360deg);}}    
     img{-webkit-transform: rotate(360deg);animation: rotation 3s linear infinite;-moz-animation: rotation 3s linear infinite;-webkit-animation: rotation 3s linear infinite;-o-animation: rotation 3s linear infinite;}
+    @media screen and (max-width:690px ) {
+        .font{font-size: 33px;}
+        .font::after{height: 50px;}
+
+        .tb img{width: 60%; }
+    }
 </style>
 
 <body>
@@ -61,26 +110,82 @@
         <div class="tb">
             <img src="img/tb.png" alt="">
         </div>
+        <div class="d1">
+            <div class="font">
+            </div>
+        </div>
         <div class="jz">
             <div class="x"></div>
         </div>
-
     </div>
 </body>
 <script>
     window.onload = function () {
-        //第一屏侧边导航半出
+
         $(".x").css("width", "99%");
     }
 
     setTimeout(function () {
-        $(".box-b").css("left", "-110%")
-        $(".jz").css("opacity", "0")
-    }, 5000)
+        $(".box-b").css("opacity", "0")
+    }, 3500)
 
     setTimeout(function () {
         window.location.href = "blog.html"
-    }, 6600)
+    }, 5500)
+    var arr = ['嗨~ 别来无恙!', '马上就好了😊', ]
+var index = 0
+var i = 0
+var str2 = ''
+var time1, time2
+var font = document.getElementsByClassName('font')[0]
+
+function add(index) {
+    str2 = this.str.slice(0, index)
+    console.log(str2)
+    font.innerHTML = str2
+    if (index <= this.str.length) {
+        setTime('add', 170)
+    } else {
+        clearTimeout(time1)
+        setTime('reduce', 1000)
+    }
+}
+
+function reduce(index) {
+    str2 = this.str.slice(0, index)
+    font.innerHTML = str2
+    if (index > 0) {
+        setTime('reduce', 50)
+    } else {
+        index = 0
+        clearTimeout(time1)
+        if (i < arr.length - 1) {
+            i++
+        } else i = 0
+        change(i)
+    }
+}
+// 定时器
+function setTime(type, time) {
+    var that = this
+    time1 = setTimeout(function() {
+        if (type == 'add') {
+            index++
+            add(index)
+        } else {
+            index = index > 0 ? index - 1 : 0
+            reduce(that.index)
+        }
+    }, time);
+}
+
+function change(i) {
+    if (i < arr.length) {
+        this.str = arr[i]
+        add(index)
+    }
+}
+change(0)
 </script>
 
 </html>
